@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15D86F61CEA5DCF9142B1BCF /* Pods_Intelity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FF8851E2A62E5CF8EEA594 /* Pods_Intelity.framework */; };
 		21999FB9222AD1280018EE65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21999FB8222AD1280018EE65 /* AppDelegate.swift */; };
-		21999FBB222AD1280018EE65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21999FBA222AD1280018EE65 /* ViewController.swift */; };
-		21999FBE222AD1280018EE65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21999FBC222AD1280018EE65 /* Main.storyboard */; };
 		21999FC1222AD1280018EE65 /* Intelity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21999FBF222AD1280018EE65 /* Intelity.xcdatamodeld */; };
 		21999FC3222AD12A0018EE65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21999FC2222AD12A0018EE65 /* Assets.xcassets */; };
 		21999FC6222AD12A0018EE65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21999FC4222AD12A0018EE65 /* LaunchScreen.storyboard */; };
+		21999FD3222AD6F80018EE65 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21999FD2222AD6F80018EE65 /* WeatherViewController.swift */; };
+		21999FD5222AD7180018EE65 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21999FD4222AD7180018EE65 /* Weather.storyboard */; };
+		21999FDA222AE9A90018EE65 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21999FD9222AE9A90018EE65 /* WeatherViewModel.swift */; };
+		21999FDD222AE9F10018EE65 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21999FDC222AE9F10018EE65 /* WeatherView.swift */; };
+		21999FE3222AEE250018EE65 /* SimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21999FE2222AEE250018EE65 /* SimpleCell.swift */; };
+		21999FE7222AEE740018EE65 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21999FE5222AEE740018EE65 /* LoadingCell.swift */; };
+		21999FE8222AEE740018EE65 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21999FE6222AEE740018EE65 /* LoadingCell.xib */; };
+		21999FEC222AEFAC0018EE65 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21999FEB222AEFAC0018EE65 /* Api.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		21999FB5222AD1280018EE65 /* Intelity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Intelity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21999FB8222AD1280018EE65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		21999FBA222AD1280018EE65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		21999FBD222AD1280018EE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21999FC0222AD1280018EE65 /* Intelity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Intelity.xcdatamodel; sourceTree = "<group>"; };
 		21999FC2222AD12A0018EE65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21999FC5222AD12A0018EE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21999FC7222AD12A0018EE65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21999FD2222AD6F80018EE65 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		21999FD4222AD7180018EE65 /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
+		21999FD9222AE9A90018EE65 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		21999FDC222AE9F10018EE65 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		21999FE2222AEE250018EE65 /* SimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCell.swift; sourceTree = "<group>"; };
+		21999FE5222AEE740018EE65 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		21999FE6222AEE740018EE65 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		21999FEB222AEFAC0018EE65 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		43FF8851E2A62E5CF8EEA594 /* Pods_Intelity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Intelity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A8CAE12FAE28AD9848316E /* Pods-Intelity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Intelity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Intelity/Pods-Intelity.debug.xcconfig"; sourceTree = "<group>"; };
+		D6416A70313C94E9FCDA2EC9 /* Pods-Intelity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Intelity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Intelity/Pods-Intelity.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D86F61CEA5DCF9142B1BCF /* Pods_Intelity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +59,8 @@
 			children = (
 				21999FB7222AD1280018EE65 /* Intelity */,
 				21999FB6222AD1280018EE65 /* Products */,
+				A9FFAB942BC6B46E37D087EF /* Pods */,
+				70532E009C391441C64AA1D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +76,109 @@
 			isa = PBXGroup;
 			children = (
 				21999FB8222AD1280018EE65 /* AppDelegate.swift */,
-				21999FBA222AD1280018EE65 /* ViewController.swift */,
-				21999FBC222AD1280018EE65 /* Main.storyboard */,
 				21999FC2222AD12A0018EE65 /* Assets.xcassets */,
-				21999FC4222AD12A0018EE65 /* LaunchScreen.storyboard */,
 				21999FC7222AD12A0018EE65 /* Info.plist */,
+				21999FC4222AD12A0018EE65 /* LaunchScreen.storyboard */,
 				21999FBF222AD1280018EE65 /* Intelity.xcdatamodeld */,
+				21999FCE222AD6430018EE65 /* Code */,
 			);
 			path = Intelity;
+			sourceTree = "<group>";
+		};
+		21999FCE222AD6430018EE65 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				21999FE9222AEF950018EE65 /* Api */,
+				21999FDB222AE9C00018EE65 /* Protocols */,
+				21999FD0222AD69D0018EE65 /* Controllers */,
+				21999FD8222AE9890018EE65 /* View models */,
+				21999FDE222AEDD20018EE65 /* Views */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		21999FD0222AD69D0018EE65 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				21999FD1222AD6B10018EE65 /* Weather */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		21999FD1222AD6B10018EE65 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				21999FD2222AD6F80018EE65 /* WeatherViewController.swift */,
+				21999FD4222AD7180018EE65 /* Weather.storyboard */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		21999FD8222AE9890018EE65 /* View models */ = {
+			isa = PBXGroup;
+			children = (
+				21999FD9222AE9A90018EE65 /* WeatherViewModel.swift */,
+			);
+			path = "View models";
+			sourceTree = "<group>";
+		};
+		21999FDB222AE9C00018EE65 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				21999FDC222AE9F10018EE65 /* WeatherView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		21999FDE222AEDD20018EE65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				21999FDF222AEE040018EE65 /* UITableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		21999FDF222AEE040018EE65 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				21999FE2222AEE250018EE65 /* SimpleCell.swift */,
+				21999FE4222AEE510018EE65 /* Loading */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		21999FE4222AEE510018EE65 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				21999FE5222AEE740018EE65 /* LoadingCell.swift */,
+				21999FE6222AEE740018EE65 /* LoadingCell.xib */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		21999FE9222AEF950018EE65 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				21999FEB222AEFAC0018EE65 /* Api.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		70532E009C391441C64AA1D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43FF8851E2A62E5CF8EEA594 /* Pods_Intelity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9FFAB942BC6B46E37D087EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3A8CAE12FAE28AD9848316E /* Pods-Intelity.debug.xcconfig */,
+				D6416A70313C94E9FCDA2EC9 /* Pods-Intelity.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21999FCA222AD12A0018EE65 /* Build configuration list for PBXNativeTarget "Intelity" */;
 			buildPhases = (
+				1557BC32BA8B9B6A8B6EEE77 /* [CP] Check Pods Manifest.lock */,
 				21999FB1222AD1280018EE65 /* Sources */,
 				21999FB2222AD1280018EE65 /* Frameworks */,
 				21999FB3222AD1280018EE65 /* Resources */,
+				E32422069D12E67443C97897 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,35 +242,74 @@
 			buildActionMask = 2147483647;
 			files = (
 				21999FC6222AD12A0018EE65 /* LaunchScreen.storyboard in Resources */,
+				21999FD5222AD7180018EE65 /* Weather.storyboard in Resources */,
+				21999FE8222AEE740018EE65 /* LoadingCell.xib in Resources */,
 				21999FC3222AD12A0018EE65 /* Assets.xcassets in Resources */,
-				21999FBE222AD1280018EE65 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1557BC32BA8B9B6A8B6EEE77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Intelity-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E32422069D12E67443C97897 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Intelity/Pods-Intelity-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Intelity/Pods-Intelity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		21999FB1222AD1280018EE65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21999FDD222AE9F10018EE65 /* WeatherView.swift in Sources */,
 				21999FC1222AD1280018EE65 /* Intelity.xcdatamodeld in Sources */,
-				21999FBB222AD1280018EE65 /* ViewController.swift in Sources */,
+				21999FDA222AE9A90018EE65 /* WeatherViewModel.swift in Sources */,
+				21999FD3222AD6F80018EE65 /* WeatherViewController.swift in Sources */,
+				21999FE7222AEE740018EE65 /* LoadingCell.swift in Sources */,
 				21999FB9222AD1280018EE65 /* AppDelegate.swift in Sources */,
+				21999FEC222AEFAC0018EE65 /* Api.swift in Sources */,
+				21999FE3222AEE250018EE65 /* SimpleCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		21999FBC222AD1280018EE65 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21999FBD222AD1280018EE65 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		21999FC4222AD12A0018EE65 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,11 +439,13 @@
 		};
 		21999FCB222AD12A0018EE65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A8CAE12FAE28AD9848316E /* Pods-Intelity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NP78NRZ4Q7;
 				INFOPLIST_FILE = Intelity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,17 +453,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Mikael-Melkonyan.Intelity";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		21999FCC222AD12A0018EE65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6416A70313C94E9FCDA2EC9 /* Pods-Intelity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NP78NRZ4Q7;
 				INFOPLIST_FILE = Intelity/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +473,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Mikael-Melkonyan.Intelity";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mw0-6u-0gd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="H7H-zQ-OW9">
+            <objects>
+                <viewController storyboardIdentifier="WeatherViewController" id="Mw0-6u-0gd" customClass="WeatherViewController" customModule="Intelity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cB1-29-Nm2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysK-bt-ZdQ">
+                                <rect key="frame" x="24" y="44" width="66.5" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SlO-j3-zFV">
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTu-ld-YXJ">
+                                <rect key="frame" x="287" y="44" width="64" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="P0U-u0-KC4"/>
+                                    <constraint firstAttribute="height" constant="32" id="RPC-dH-kuR"/>
+                                </constraints>
+                                <state key="normal" image="update"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SlO-j3-zFV" firstAttribute="leading" secondItem="Kte-ve-sBX" secondAttribute="leading" id="4ni-E6-PrS"/>
+                            <constraint firstItem="Kte-ve-sBX" firstAttribute="trailing" secondItem="SlO-j3-zFV" secondAttribute="trailing" id="GSj-DK-jBj"/>
+                            <constraint firstItem="ysK-bt-ZdQ" firstAttribute="top" secondItem="Kte-ve-sBX" secondAttribute="top" constant="24" id="Pnl-Wu-iiu"/>
+                            <constraint firstItem="SlO-j3-zFV" firstAttribute="top" secondItem="ysK-bt-ZdQ" secondAttribute="bottom" id="Q1a-ag-CYD"/>
+                            <constraint firstItem="ysK-bt-ZdQ" firstAttribute="leading" secondItem="Kte-ve-sBX" secondAttribute="leading" constant="24" id="Vn3-VZ-803"/>
+                            <constraint firstItem="Kte-ve-sBX" firstAttribute="trailing" secondItem="mTu-ld-YXJ" secondAttribute="trailing" constant="24" id="YwR-G1-E9a"/>
+                            <constraint firstItem="mTu-ld-YXJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ysK-bt-ZdQ" secondAttribute="trailing" constant="5" id="iki-rc-zk2"/>
+                            <constraint firstAttribute="bottom" secondItem="SlO-j3-zFV" secondAttribute="bottom" id="nmf-qt-pFg"/>
+                            <constraint firstItem="mTu-ld-YXJ" firstAttribute="centerY" secondItem="ysK-bt-ZdQ" secondAttribute="centerY" id="w6e-oH-LTs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kte-ve-sBX"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="SlO-j3-zFV" id="j4j-gS-BOf"/>
+                        <outlet property="titleLabel" destination="ysK-bt-ZdQ" id="0ve-sS-Oea"/>
+                        <outlet property="updateButton" destination="mTu-ld-YXJ" id="0hT-6f-pPG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jYL-mg-4XG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="update" width="20" height="18"/>
+    </resources>
+</document>
