@@ -33,13 +33,27 @@ final class WeatherCell: SimpleCell {
             .joined(separator: ", ")
         temperature.text = String(format: "%.0f", weather.temperature.rounded(to: 0)) + "°"
         
-        icon.image = nil
-        if let type = weather.types?.first, let iconName = type.iconName {
+        setupIcon(weatherType: weather.types?.first, row: row)
+    }
+    
+    private func setupIcon(weatherType: WeatherType?, row: Int) {
+        guard let type = weatherType else {
+            icon.image = nil
+            return
+        }
+        
+        if let imageData = type.icon {
+            icon.image = UIImage(data: imageData, scale: 1)
+        } else if let iconName = type.iconName {
             ImageLoader.load(by: iconName, index: row) { [weak self] (name, _row, image) in
                 if let image = image, row == _row {
                     self?.icon.image = image
+                    type.icon = image.jpegData(compressionQuality: 1)
+                    CoreData.shared.saveContext()
                 }
             }
+        } else {
+            icon.image = nil
         }
     }
 }

@@ -66,7 +66,9 @@ extension WeatherViewModel {
                 case let .success(jsonList):
                     if !jsonList.isEmpty {
                         let list = jsonList.compactMap { self?.coreData.getWeather(from: $0) }
-                        CoreData.shared.saveContext()
+                        main {
+                            CoreData.shared.saveContext()
+                        }
                         _self.properties = .success(list)
                     } else {
                         _self.properties = .message("Weather list is empty")
