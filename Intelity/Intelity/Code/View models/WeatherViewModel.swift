@@ -29,9 +29,13 @@ final class WeatherViewModel {
     init(view: WeatherView) {
         self.view = view
         reachability.whenReachable = { [weak self] (reachability) in
+            self?.checkReachability()
             if reachability.connection != .none {
                 self?.updateWeatherData()
             }
+        }
+        reachability.whenUnreachable = { [weak self] (reachability) in
+            self?.checkReachability()
         }
     }
     
@@ -80,5 +84,17 @@ extension WeatherViewModel {
     
     func stopReachabilityNotifier() {
         reachability.stopNotifier()
+    }
+    
+    func checkReachability() {
+        background {
+            var lastDate: String?
+            if case let .success(list) = self.properties, let date = list.first?.date {
+                lastDate = date.dateAndTime
+            }
+            main {
+                self.view.changeOfflineModePopup(showing: self.reachability.connection == .none, lastDate: lastDate)
+            }
+        }
     }
 }

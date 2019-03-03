@@ -13,6 +13,10 @@ final class WeatherViewController: UIViewController {
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var updateButton: UIButton!
     @IBOutlet weak private var tableView: UITableView!
+    // Offline mode popup
+    @IBOutlet weak private var offlineModeText: UILabel!
+    @IBOutlet weak private var offlineModeDefaultHeight: NSLayoutConstraint!
+    @IBOutlet weak private var offlineModeZeroHeight: NSLayoutConstraint!
     
     private lazy var viewModel = WeatherViewModel(view: self)
     private let refreshControl = UIRefreshControl()
@@ -27,11 +31,14 @@ final class WeatherViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         viewModel.startReachabilityNotifier()
+        viewModel.checkReachability()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
         viewModel.stopReachabilityNotifier()
     }
     
@@ -52,6 +59,21 @@ extension WeatherViewController: WeatherView {
         }
         
         tableView.reloadData()
+    }
+    
+    func changeOfflineModePopup(showing: Bool, lastDate: String?) {
+        offlineModeDefaultHeight.priority = showing ? .defaultHigh : .defaultLow
+        offlineModeZeroHeight.priority = !showing ? .defaultHigh : .defaultLow
+        
+        var text = "Offline mode."
+        if let lastDate = lastDate {
+            text += " This weather was actual " + lastDate
+        }
+        offlineModeText.text = text
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
 }
 

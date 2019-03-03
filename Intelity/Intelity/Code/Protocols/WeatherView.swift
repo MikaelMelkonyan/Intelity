@@ -9,4 +9,5 @@
 protocol WeatherView: AnyObject {
     
     func update()
+    func changeOfflineModePopup(showing: Bool, lastDate: String?)
 }

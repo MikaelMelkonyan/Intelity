@@ -37,6 +37,7 @@
 		2199A030222C224E0018EE65 /* WeatherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199A028222C224E0018EE65 /* WeatherType.swift */; };
 		2199A032222C224E0018EE65 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199A02A222C224E0018EE65 /* Weather.swift */; };
 		2199A065222C5B5A0018EE65 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2199A064222C5B5A0018EE65 /* Reachability.swift */; };
+		21AED79E222C6C530040E138 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AED79D222C6C530040E138 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		2199A028222C224E0018EE65 /* WeatherType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherType.swift; sourceTree = "<group>"; };
 		2199A02A222C224E0018EE65 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		2199A064222C5B5A0018EE65 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		21AED79D222C6C530040E138 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		43FF8851E2A62E5CF8EEA594 /* Pods_Intelity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Intelity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A8CAE12FAE28AD9848316E /* Pods-Intelity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Intelity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Intelity/Pods-Intelity.debug.xcconfig"; sourceTree = "<group>"; };
 		D6416A70313C94E9FCDA2EC9 /* Pods-Intelity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Intelity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Intelity/Pods-Intelity.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				2199A007222BEA400018EE65 /* Double.swift */,
 				2199A009222BEC240018EE65 /* Collection.swift */,
 				2199A00B222BEF2F0018EE65 /* String.swift */,
+				21AED79D222C6C530040E138 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				21999FB9222AD1280018EE65 /* AppDelegate.swift in Sources */,
 				21999FEC222AEFAC0018EE65 /* Api.swift in Sources */,
 				2199A030222C224E0018EE65 /* WeatherType.swift in Sources */,
+				21AED79E222C6C530040E138 /* Date.swift in Sources */,
 				2199A004222BE55A0018EE65 /* WeatherCell.swift in Sources */,
 				21999FE3222AEE250018EE65 /* SimpleCell.swift in Sources */,
 				21999FEE222AFD760018EE65 /* WeatherApi.swift in Sources */,
