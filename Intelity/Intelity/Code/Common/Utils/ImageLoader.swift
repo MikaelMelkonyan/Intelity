@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class ImageLoader {
+final class ImageLoader {
     
     static func load(by name: String, index: Int?, completion: @escaping ((String, Int?, UIImage?) -> ())) {
         guard let url = URL(string: Api.imageUrl + name + ".png") else {

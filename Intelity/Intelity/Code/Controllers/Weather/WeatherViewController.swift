@@ -25,6 +25,16 @@ final class WeatherViewController: UIViewController {
         viewModel.updateWeatherData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.startReachabilityNotifier()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        viewModel.stopReachabilityNotifier()
+    }
+    
     @objc private func refresh() {
         viewModel.updateWeatherData()
     }

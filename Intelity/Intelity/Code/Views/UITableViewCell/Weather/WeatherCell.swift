@@ -16,15 +16,26 @@ final class WeatherCell: SimpleCell {
     @IBOutlet weak private var temperature: UILabel!
     
     func fill(weather: Weather, row: Int) {
-        location.text = "\(weather.city.name.capitalized), \(weather.city.country.code.uppercased())"
-        self.weather.text = weather.values
-            .map { $1.capitalizedFirstLetter }
+        var locationData = [String]()
+        if let city = weather.city {
+            if let cityName = city.name {
+                locationData.append(cityName)
+            }
+            if let countryCode = city.countryCode {
+                locationData.append(countryCode.uppercased())
+            }
+        }
+        location.text = locationData.joined(separator: ", ")
+        
+        self.weather.text = weather.types?
+            .compactMap { $0.name?.capitalizedFirstLetter }
+            .sorted()
             .joined(separator: ", ")
         temperature.text = String(format: "%.0f", weather.temperature.rounded(to: 0)) + "°"
         
         icon.image = nil
-        if let value = weather.values.first {
-            ImageLoader.load(by: value.icon, index: row) { [weak self] (name, _row, image) in
+        if let type = weather.types?.first, let iconName = type.iconName {
+            ImageLoader.load(by: iconName, index: row) { [weak self] (name, _row, image) in
                 if let image = image, row == _row {
                     self?.icon.image = image
                 }

@@ -9,25 +9,35 @@
 final class WeatherViewModel {
     
     private unowned var view: WeatherView
-    init(view: WeatherView) {
-        self.view = view
-    }
     
     private let api = WeatherApi()
+    private let coreData = WeatherCoreData()
+    private let reachability = Reachability()!
+    private let cityIDs = ["Kyiv": "703448", "Toronto": "6167865", "London": "2643741"]
     
     var properties: ResponseState<[Weather]> = .loading {
         didSet {
+            if case let .success(list) = properties {
+                properties = .success(list.sorted(by: { ($0.id ?? "") > ($1.id ?? "") }))
+            }
             main {
                 self.view.update()
             }
         }
     }
     
-    private let cityIDs = [
-        "Kyiv": "703448",
-        "Toronto": "6167865",
-        "London": "2643741"
-    ]
+    init(view: WeatherView) {
+        self.view = view
+        reachability.whenReachable = { [weak self] (reachability) in
+            if reachability.connection != .none {
+                self?.updateWeatherData()
+            }
+        }
+    }
+    
+    deinit {
+        reachability.stopNotifier()
+    }
 }
 
 // MARK: Public
@@ -35,6 +45,12 @@ extension WeatherViewModel {
     
     func updateWeatherData() {
         properties = .loading
+        guard reachability.connection != .none else {
+            let list = coreData.getList()
+            properties = !list.isEmpty ? .success(list) : .message("Weather list is empty")
+            return
+        }
+        
         background {
             let cityIDs = self.cityIDs.map { $1 }
             self.api.getWeather(by: cityIDs) { [weak self] in
@@ -43,8 +59,10 @@ extension WeatherViewModel {
                 }
                 
                 switch $0 {
-                case let .success(list):
-                    if !list.isEmpty {
+                case let .success(jsonList):
+                    if !jsonList.isEmpty {
+                        let list = jsonList.compactMap { self?.coreData.getWeather(from: $0) }
+                        CoreData.shared.saveContext()
                         _self.properties = .success(list)
                     } else {
                         _self.properties = .message("Weather list is empty")
@@ -54,5 +72,13 @@ extension WeatherViewModel {
                 }
             }
         }
+    }
+    
+    func startReachabilityNotifier() {
+        try? reachability.startNotifier()
+    }
+    
+    func stopReachabilityNotifier() {
+        reachability.stopNotifier()
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InformationCell: SimpleCell {
+final class InformationCell: SimpleCell {
     
     @IBOutlet weak private var descriptionText: UILabel!
     @IBOutlet weak private var tryAgainButton: UIButton!

@@ -11,7 +11,7 @@ import SwiftyJSON
 
 final class WeatherApi: Api {
     
-    func getWeather(by cityIds: [String], completion: @escaping ((Response<[Weather]>) -> ())) {
+    func getWeather(by cityIds: [String], completion: @escaping ((Response<[JSON]>) -> ())) {
         guard !cityIds.isEmpty else {
             let message = "City IDs is empty"
             completion(.error(message))
@@ -29,8 +29,7 @@ final class WeatherApi: Api {
             switch apiResponse.result {
             case let .success(value):
                 let json = JSON(value)
-                if let jsonList = json["list"].array {
-                    let list = jsonList.map { Weather(json: $0) }
+                if let list = json["list"].array {
                     completion(.success(list))
                 } else {
                     let error = json["message"].string ?? super.somethingWentWrongMessage
