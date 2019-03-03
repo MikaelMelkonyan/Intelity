@@ -14,7 +14,7 @@
 - Hardcoded 3 cities: Kyiv, Toronto, London
 - If an Internet connection appeared then a warning panel are shown (with weather “actual” time).
 
-<div style="text-align:center">![](video.gif)</div>
+![](video.gif)
 
 <p align="center">
 Made with 🖤 by <a href="https://github.com/MikaelMelkonyan">Mikael Melkonyan</a>
