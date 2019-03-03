@@ -7,11 +7,15 @@
 >An idea of the application - a super simple weather application that shows a list of cities and current weather in them.
 
 ## App requirements:
-- The application should use https://openweathermap.org/api
-- Icons for weather conditions (the icon is placed left to a city name in the cities list) https://openweathermap.org/weather-conditions 
-- The application has to cache the most recent weather data and show it even if there is no Internet connection
-- The cities list should support pull-to-refresh and a refresh button on the top panel
-- Hardcode 3 cities (e.g. Kyiv, Toronto, London)
-- If an Internet connection appeared then a warning panel should be shown (with weather “actual” time).
+- The application uses https://openweathermap.org/api
+- Icons for weather conditions https://openweathermap.org/weather-conditions 
+- The application caches the most recent weather data and shows it even if there is no Internet connection
+- The cities list supports pull-to-refresh and a refresh button on the top panel
+- Hardcoded 3 cities: Kyiv, Toronto, London
+- If an Internet connection appeared then a warning panel are shown (with weather “actual” time).
 
-![](video.gif)
+<div style="text-align:center">![](video.gif)</div>
+
+<p align="center">
+Made with 🖤 by <a href="https://github.com/MikaelMelkonyan">Mikael Melkonyan</a>
+</p>
