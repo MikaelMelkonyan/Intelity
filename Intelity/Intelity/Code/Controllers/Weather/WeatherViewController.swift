@@ -16,6 +16,7 @@ final class WeatherViewController: UIViewController {
     
     private lazy var viewModel = WeatherViewModel(view: self)
     private let refreshControl = UIRefreshControl()
+    private let kDefaultInset: CGFloat = 24
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +93,7 @@ extension WeatherViewController {
         tableView.dataSource = self
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.contentInset = UIEdgeInsets(top: 24, left: 0, bottom: 24, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: kDefaultInset, left: 0, bottom: kDefaultInset, right: 0)
         
         tableView.register(UINib(nibName: "LoadingCell", bundle: nil), forCellReuseIdentifier: "LoadingCell")
         tableView.register(UINib(nibName: "InformationCell", bundle: nil), forCellReuseIdentifier: "InformationCell")
